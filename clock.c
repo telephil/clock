@@ -40,7 +40,7 @@ drawpixel(int x0, int y0, int x, int y)
 {
 	Point p[4], o;
 
-	o = Pt(x0, y0);
+	o = addpt(Pt(x0, y0), screen->r.min);
 	p[0] = addpt(o, mulpt(Pt(x,   y),   pixelsize));
 	p[1] = addpt(o, mulpt(Pt(x+1, y),   pixelsize));
 	p[2] = addpt(o, mulpt(Pt(x+1, y+1), pixelsize));
